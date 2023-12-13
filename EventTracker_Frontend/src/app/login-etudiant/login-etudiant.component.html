@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion au Club</title>
+    <link rel="stylesheet" href="C:\Users\Huawei\Desktop\L3DSI2\Projet d'integration PI\PI2\StudentEvents\src\app\login-etudiant\login-etudiant.component.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Espace Etudiant</h2>
+    <form [formGroup]="loginForm" (submit)="login()">
+      <label for="email">Login :</label>
+      <input type="text" id="email" name="email" formControlName="email" required>
+    
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" formControlName="password" required>
+    
+      <button (click)="login()" type="submit">Se connecter</button>
+    </form>
+    
+
+    <p>Vous n'avez pas de compte ? <a href="register.php">Créer un compte</a></p>
+  </div>
+
+</body>
+</html>

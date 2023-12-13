@@ -1,0 +1,46 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+<nav role="navigation" 
+  class="navbar-expand-lg navbar-light primary-navigation"
+  style="background-color: #c0c0c0"
+>
+<ul>
+  <li *ngIf="!isAuthinticatedClub" routerLink="home" routerLinkActive="active"><a >Home</a></li>
+  <li *ngIf="!isAuthinticated"><a >Espace Club &dtrif;</a>
+    <ul class="dropdown">
+      <li routerLink="loginClub"><a >Login</a></li>
+      <li routerLink="registerClub" ><a >Register</a></li>
+ 
+    </ul>
+  </li>
+  <li *ngIf="!isAuthinticated"><a>Ecpace Etudiant &dtrif;</a>
+    <ul class="dropdown">
+      <li routerLink="loginEtudiant" ><a >Login</a></li>
+      <li routerLink="registerEtudiant"><a >Register</a></li>
+   
+    </ul>
+  </li>
+  <button style="margin:0px 8px; background-color: rgba(0, 128, 0, 0.854); color: white;" routerLink="home" *ngIf="isAuthinticatedClub" class="btn btn-sm btn-cart" data-toggle="dropdown">
+    <i class="fas fa-home" aria-hidden="true" style="cursor: pointer;"></i>
+    <span class="badge badge-danger">Home</span>
+  </button>
+  <button style="margin:0px 8px; background-color: rgba(73, 0, 128, 0.703); color: white;" routerLink="events" *ngIf="isAuthinticatedClub" class="btn btn-sm btn-cart" data-toggle="dropdown">
+    <i class="far fa-calendar" aria-hidden="true" style="cursor: pointer;"></i>
+    <span class="badge badge-danger">List Events</span>
+  </button>
+  <button style="margin:0px 8px; background-color: rgba(128, 0, 105, 0.703); color: white;" routerLink="create-event" *ngIf="isAuthinticatedClub" class="btn btn-sm btn-cart" data-toggle="dropdown">
+    <i class="far fa-calendar" aria-hidden="true" style="cursor: pointer;"></i>
+    <span class="badge badge-danger">Add new Event</span>
+  </button>
+  
+  
+  <button style="margin:0px 8px; background-color: rgba(128, 0, 11, 0.854); color: white;" (click)="logOut()" *ngIf="isAuthinticated" class="btn btn-sm btn-cart" data-toggle="dropdown">
+    <i class="fas fa-sign-out-alt" aria-hidden="true" style="cursor: pointer;"></i>
+    <span class="badge badge-danger">log-Out</span>
+  </button>
+  
+  
+ 
+  <!-- <li><a >About</a></li>
+  <li><a >Contact</a></li> -->
+</ul>
+</nav>

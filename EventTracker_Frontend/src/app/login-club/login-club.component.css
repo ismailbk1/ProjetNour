@@ -1,0 +1,60 @@
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5; 
+    border: 2px solid #8b5f8a; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    color: #8b5f8a; 
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px; 
+    color: #5a436a; 
+}
+  
+  input {
+    padding: 12px;
+    margin-bottom: 18px; 
+    border: 2px solid #5a436a; 
+    border-radius: 8px; 
+  }
+  
+  button {
+    padding: 12px 24px; 
+    background-color: #673ab7; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+    font-size: 1.5em;
+  }
+  
+  button:hover {
+    background-color: #8e5ea2;
+  }
+  
+ 
+body {
+  /* background-image: url("C:/Users/Huawei/Desktop/L3DSI2/Projet d'integration PI/PI2/StudentEvents/src/app/Images/backgrpund-img3.jpg"); */
+  background-size: cover;
+  background-position: center;
+  margin-top: 10%;
+}
+
+  a:hover{
+    color: #a84cd9;
+  }
+  

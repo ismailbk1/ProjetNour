@@ -1,0 +1,134 @@
+/* Increase space between navbar items */
+
+.navbar-nav {
+  justify-content: space-between;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .item {
+  text-align: center;
+  font-size: 1.3em;
+}
+nav {
+  &.primary-navigation {
+    margin: 0 auto;
+    display: block;
+
+    padding: 20px 0 0 0;
+    text-align: center;
+    font-size: 16px;
+
+    ul li {
+      list-style: none;
+      margin: 0 auto;
+      border-left: 2px solid #3ca0e7;
+      display: inline-block;
+      padding: 0 30px;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      font-family: arvo;
+    }
+
+    li a {
+      color: black;
+    }
+
+    li a:hover {
+      color: #3ca0e7;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    ul li ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+padding-left: 0;
+      left: 0;
+      display: none;
+      background: white;
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      min-width: 250px;
+      text-align: left;
+      padding-top: 20px;
+      box-shadow: 0px 3px 5px -1px #ccc;
+    }
+
+    ul li ul li {
+      clear: both;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+      border-style: none;
+    }
+
+    ul li ul li a:hover {
+      padding-left: 10px;
+      border-left: 2px solid #3ca0e7;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+a {
+
+    text-decoration: none;
+
+    &:hover {
+        color: #3CA0E7;
+    }
+
+}
+
+ ul li ul li a { transition: all 0.5s ease; }
+
+
+.navbar-nav .event {
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.navbar-nav .item {
+  white-space: nowrap;
+  margin-right: 100%; /* Adjust for desired spacing */
+}
+
+/* Hover effect */
+.navbar-nav .nav-item:hover a,
+.navbar-nav .item:hover {
+  color: rgb(68, 43, 43);
+}
+
+/* Deconnection button style */
+.navbar-nav .item a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Specific hover style for Deconnection button */
+.navbar-nav .item:hover a {
+  background-color: #ccc;
+}
+
+/* Event styling */
+.navbar-nav .event {
+  margin-right: 5%;
+}
+
+/* Deconnection button positioning */
+.float-left {
+  float: left;
+}

@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 60px;">
+  <h3>Create Event</h3>
+  <form [formGroup]="eventForm" >
+    <div class="form-group">
+      <label for="eventName">Event Name</label>
+      <input type="text" class="form-control" id="eventName" formControlName="eventName" required>
+    </div>
+    <div class="form-group">
+      <label for="eventDate">Date</label>
+      <input type="date" class="form-control" id="eventDate" formControlName="date" required>
+    </div>
+    <div class="form-group">
+      <label for="eventLocation">Location</label>
+      <input type="text" class="form-control" id="eventLocation" formControlName="location" required>
+    </div>
+    <div class="form-group">
+      <label for="eventDescription">Description</label>
+      <textarea class="form-control" id="eventDescription" formControlName="description" required></textarea>
+    </div>
+
+    <div class="form-row" >
+      <input type="file" id="file" (change)="onFileSelected($event)" />
+      <p style="margin:10px ;" *ngIf="selectedFile">Selected File: {{ selectedFile.name }}</p>
+      
+
+     </div>
+    <div class="form-group">
+      <label for="eventPrice">Price</label>
+      <input type="number" class="form-control" id="eventPrice" formControlName="price" required>
+    </div>
+    <div class="form-group">
+      <label for="eventUrl">URL</label>
+      <input type="url" class="form-control" id="eventUrl" formControlName="url" required>
+    </div>
+    <button (click)="addEvent()" class="btn btn-success" type="submit">Submit</button>
+  </form>
+  
+</div>

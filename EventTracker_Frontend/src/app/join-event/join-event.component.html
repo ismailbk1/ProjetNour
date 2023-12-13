@@ -1,0 +1,26 @@
+<div class="container">  
+    <form id="contact" [formGroup]="eventForm" >
+        <h3>Join Event</h3>
+        <h4>Please provide your information </h4>
+      
+        <fieldset>
+          <input type="text" placeholder="Your name" formControlName="name" tabindex="1" required autofocus>
+        </fieldset>
+      
+        <fieldset>
+          <input type="email" placeholder="Your Email Address" formControlName="email" tabindex="2" required>
+        </fieldset>
+      
+        <fieldset>
+          <input type="tel" placeholder="Your Phone Number (optional)" formControlName="phoneNumber" tabindex="3">
+        </fieldset>
+      
+        <fieldset>
+          <textarea placeholder="Type your message here...." formControlName="message" tabindex="5" required></textarea>
+        </fieldset>
+      
+        <fieldset>
+          <button type="submit" (click)="onSubmit()" name="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+      </form>
+  </div>

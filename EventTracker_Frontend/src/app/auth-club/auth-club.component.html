@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification Club</title>
+    <link rel="stylesheet" href="C:\Users\Huawei\Desktop\L3DSI2\Projet d'integration PI\PI2\StudentEvents\src\app\auth-club\auth-club.component.css">
+  </head>
+<body>
+
+  <div class="auth-container">
+    <h2>Créer un compte Club</h2>
+    <form  [formGroup]="clubForm">
+
+      <div class="form-row">
+        <label for="clubName">Nom du club:</label>
+        <input type="text" id="clubName" formControlName="name" required>
+    
+        <label for="clubEmail">Adresse e-mail:</label>
+        <input type="email" id="clubEmail" formControlName="clubEmail" required>
+    
+        <label for="clubPassword">Mot de passe:</label>
+        <input type="password" id="clubPassword" formControlName="password" required>
+      </div>
+    
+      <div class="form-row">
+        <label for="confirmPassword">Confirmer le mot de passe:</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
+    
+        <label for="clubDescription">Description du club:</label>
+        <textarea id="clubDescription" formControlName="description" rows="4" required></textarea>
+      </div>
+    
+      <div class="form-row">
+        <label for="clubWebsite">Site Web du club:</label>
+        <input type="url" id="clubWebsite" formControlName="webUrl">
+    
+        <label for="clubAddress">Adresse du club:</label>
+        <input type="text" id="clubAddress" formControlName="address">
+    
+        <label for="clubPhoneNumber">Numéro de téléphone du club:</label>
+        <input type="tel" id="clubPhoneNumber" formControlName="number">
+      </div>
+    
+      <div class="annee-row">
+        <label for="category">Catégorie du club:</label>
+        <select id="category" formControlName="category">
+          <option value="" disabled selected style="display:none;">Sélectionner une catégorie</option>
+          <option value="Academic">Club Académique</option>
+          <option value="Culturel">Club Culturel</option>
+          <option value="Sportif">Club Sportif</option>
+          <option value="Artistique">Club Artistique</option>
+          <option value="Sociale">Club Sociale</option>
+          <option value="Politique">Club de Gaming</option>
+          <option value="Technologique">Club Technologique</option>
+          <option value="Artistique">Club de Médias</option>
+          <option value="Environnemental">Club Environnemental</option>
+        </select>
+        &nbsp;&nbsp;
+        <label for="clubCreationYear" style="width: 20%;">Année de création du club:</label>
+        <input type="number" id="clubCreationYear" formControlName="dateCreation" style="width: 20%;">
+      </div>
+    
+      <button type="submit" (click)="onSubmit()">S'inscrire</button>
+    </form>
+    
+  </div>
+
+</body>
+</html>

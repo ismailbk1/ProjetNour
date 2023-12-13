@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Étudiant</title>
+    <link rel="stylesheet" href="C:\Users\Huawei\Desktop\L3DSI2\Projet d'integration PI\PI2\StudentEvents\src\app\auth-etudiant\auth-atudiant.component.css">
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Créer un compte Étudiant</h2>
+    <form [formGroup]="studentForm" >
+
+      <div class="form-row">
+        <label for="fullname">Nom complet:</label>
+        <input type="text" id="fullname" formControlName="fullname" required>
+        <br>
+        <label for="email">Adresse e-mail:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <br>
+        <label for="newUsername">Nom d'utilisateur:</label>
+        <input type="text" id="newUsername" formControlName="newUsername" required>
+      </div>
+    
+      <div class="form-row">
+        <label for="newPassword">Mot de passe:</label>
+        <input type="password" id="newPassword" formControlName="password" required>
+        &nbsp;&nbsp;&nbsp;
+        <label for="confirmPassword">Confirmer le mot de passe:</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
+        &nbsp;&nbsp;&nbsp;
+        <label for="birthdate">Date de naissance:</label>
+        <input type="date" id="birthdate" formControlName="birthdate" required>
+      </div>
+    
+      <div class="form-row">
+        <label for="gender">Genre:</label>
+        <select id="gender" formControlName="gender">
+          <option value="male">Homme</option>
+          <option value="female">Femme</option>
+        </select>
+    
+        <label for="phone">Numéro de téléphone:</label>
+        <input type="tel" id="phone" formControlName="phone">
+    
+        <label for="studentID">Identifiant étudiant:</label>
+        <input type="text" id="studentID" formControlName="studentID" required>
+      </div>
+    
+      <div class="form-row">
+        <label for="niveau">Niveau d'études:</label>
+        <input type="text" id="niveau" formControlName="niveau" required>
+    
+        <label for="domaine">Domaine d'études:</label>
+        <input type="text" id="domaine" formControlName="domaine" required>
+    
+        <label for="year">Année d'études:</label>
+        <input type="number" id="year" formControlName="year" required>
+      </div>
+    
+      <button (click)="onSubmit()" type="submit">S'inscrire</button>
+    </form>
+    
+  </div>
+
+</body>
+</html>

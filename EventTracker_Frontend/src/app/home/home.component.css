@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 400px; /* Ajustez la largeur maximale selon vos besoins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

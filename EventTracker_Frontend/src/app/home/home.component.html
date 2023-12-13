@@ -1,0 +1,24 @@
+
+<div class="container" style="margin-top: 30px;">
+  <h2 class="text-secondary">Event List</h2>
+  <div class="row">
+    <div *ngFor="let event of events" class="col-md-4 mb-4">
+      <div class="card">
+        <img
+          src="../../assets/images/{{event.image}}"
+          class="card-img-top"
+          alt="{{ event.eventName }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ event.eventName }}</h5>
+          <p class="card-text">Description: {{ event.description }}</p>
+          <p class="card-text">Date: {{ event.date }}</p>
+          <p class="card-text">Location: {{ event.location }}</p>
+          <p class="card-text">Price: {{ event.price }}</p>
+          <p class="card-text">URL: {{ event.url }}</p>
+          <button class="btn btn-success" (click)="joinEvent(event.eventId)">Join Event</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
